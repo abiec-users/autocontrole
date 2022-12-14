@@ -1,15 +1,16 @@
 {
+    "name": "Autocontrole",
     "version": 2,
     "builds": [
         {
-            "src": "./autocontrole.py",
+            "src": "*autocontrole.py",
             "use": "@vercel/python"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "(.*)",
+            "dest": "autocontrole.py"
         }
     ]
 }

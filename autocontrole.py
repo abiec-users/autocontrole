@@ -31,6 +31,10 @@ response = requests.post(
 
 token = response.json()['token']
 
+@app.route('/')
+def home():
+    return "<p>Home</p>"
+
 
 @app.route('/get_adesao', methods=['GET'])
 def get_adesao():
